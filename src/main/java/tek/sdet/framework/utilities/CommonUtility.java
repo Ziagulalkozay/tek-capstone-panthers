@@ -67,7 +67,7 @@ public class CommonUtility extends BaseSetup {
 		executor.executeScript("arguments[0].value = "+value+";", ele);
 	}
 	public void clearTextUsingSendKeys(WebElement toClear) {
-		toClear.sendKeys(Keys.CONTROL);
+		toClear.sendKeys(Keys.CONTROL+ "a");
 		toClear.sendKeys(Keys.DELETE);
 	}
 	public void selectByIndex(WebElement ele, int index) {
@@ -79,8 +79,8 @@ public class CommonUtility extends BaseSetup {
 		select.selectByValue(value);
 	}
 	public void selectByVisibleText(WebElement ele, String visibleText) {
-		Select select = new Select (ele);
-		select.deselectByVisibleText(visibleText);
+		Select select = new Select(ele);
+		select.selectByVisibleText(visibleText);
 	}
 	public void deselectByvalue(WebElement ele, int Index) {
 		Select select = new Select (ele);

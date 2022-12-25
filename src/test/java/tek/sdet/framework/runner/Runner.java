@@ -7,18 +7,17 @@ import static io.cucumber.junit.CucumberOptions.SnippetType.CAMELCASE;
 
 @RunWith (Cucumber.class)
 @CucumberOptions(
-		tags = "@signIn",
+		tags = "@cook",
 		features = ("classpath:features"),
-		glue = "tek.sdet.framework",
-		dryRun =false,
-		plugin= {
+		glue="tek.sdet.framework",
+		dryRun = false,
+		plugin = {
 				"pretty",
 				"html:target/htmlReports/cucumber-pretty.html",
 				"json:target/jsonReports/cucumber.json"
 		},
-		snippets = CAMELCASE,
+		snippets = io.cucumber.junit.CucumberOptions.SnippetType.CAMELCASE,
 		monochrome = true)
 public class Runner{
 	
 }
-

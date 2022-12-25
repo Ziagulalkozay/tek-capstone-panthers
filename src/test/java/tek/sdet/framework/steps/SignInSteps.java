@@ -40,7 +40,7 @@ public class SignInSteps extends CommonUtility{
 	public void userShouldBeLoggedInIntoAccount() {
 		Assert.assertTrue(isElementDisplayed(factory.homePage().account));
 		logger.info("The User logged in t Account ");
-		
+		slowDown();
 	}
 	@And("User click on Create New Account button")
 	public void userClickOnCreateNewAccountButton() {
